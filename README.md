@@ -63,11 +63,19 @@ PyTorch deep learning project made easy.
   ├── datasets/ - datasets
   │   ├── base_loader.py - abstract base dataloader
   |   ├── cub_loader.py -  data loader for CUB-200 dataset
-  |   ├── car_loader.py -  data loader for Cars196 dataset
-  |   ├── sop_loader.py -  data loader for Stanford Online Products dataset
-  │   └── in_shop_loader.py -  data loader for InShop Clothes Retrieval dataset
+  |   ├── car_loader.py -  Cars196 dataset
+  |   ├── sop_loader.py -  Stanford Online Products dataset
+  │   └── in_shop_loader.py - InShop Clothes Retrieval dataset
   │
   ├── data/ - default directory for storing input data
+  │
+  │
+  ├── losses/ - losses
+  │   ├── base_loss.py - abstract loss function
+  |   ├── nca.py - NCA Loss
+  |   ├── weight.py - MS Loss
+  │   └── binomial.py - Binomial Deviance Loss
+  │
   │
   ├── networks/ - different archtectures
   │   └── BN-inception.py

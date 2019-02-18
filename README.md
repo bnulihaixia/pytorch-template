@@ -5,7 +5,7 @@ PyTorch deep learning project made easy.
 
 <!-- code_chunk_output -->
 
-* [PyTorch Template Project](#pytorch-template-project)
+* [PyTorch Deep Metric Project](#pytorch-Deep-Metric-Learning-project)
 	* [Requirements](#requirements)
 	* [Features](#features)
 	* [Folder Structure](#folder-structure)
@@ -49,32 +49,31 @@ PyTorch deep learning project made easy.
 
 ## Folder Structure
   ```
-  pytorch-template/
+  pytorch-deep-metric-learning/
   │
   ├── train.py - main script to start training
   ├── test.py - evaluation of trained model
-  ├── config.json - config file
+  ├── config.py - config script to set default arguments
   │
-  ├── base/ - abstract base classes
-  │   ├── base_data_loader.py - abstract base class for data loaders
-  │   ├── base_model.py - abstract base class for models
-  │   └── base_trainer.py - abstract base class for trainers
+  ├── trainer/ - trainer class
+  │   ├── base_trainer.py - abstract base class for trainers
+  │   └── ret_trainer.py -  abstract trainer for retrieval model
+  |
   │
-  ├── data_loader/ - anything about data loading goes here
-  │   └── data_loaders.py
+  ├── datasets/ - datasets
+  │   ├── base_loader.py - abstract base dataloader
+  |   ├── cub_loader.py -  data loader for CUB-200 dataset
+  |   ├── car_loader.py -  data loader for Cars196 dataset
+  |   ├── sop_loader.py -  data loader for Stanford Online Products dataset
+  │   └── in_shop_loader.py -  data loader for InShop Clothes Retrieval dataset
   │
   ├── data/ - default directory for storing input data
   │
-  ├── model/ - models, losses, and metrics
-  │   ├── loss.py
-  │   ├── metric.py
-  │   └── model.py
+  ├── networks/ - different archtectures
+  │   └── BN-inception.py
   │
   ├── saved/ - default checkpoints folder
   │   └── runs/ - default logdir for tensorboardX
-  │
-  ├── trainer/ - trainers
-  │   └── trainer.py
   │
   └── utils/
       ├── util.py
